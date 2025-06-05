@@ -19,7 +19,7 @@ server.use(express.static(path.join(__dirname, '../public')));
 server.use(routes);
 
 server.use((req, res) => {
-    res.status(404).render('404', { title: 'Página não encontrada' });
+    res.render('pages/404');
 });
 
 server.listen(process.env.PORT || 4000);
